@@ -17,13 +17,10 @@ class mailu extends rcube_plugin
     // mailu admin button and texts
     $this->add_texts('localization/', true);
     
-    // password change in settings
-    $rcmail = rcmail::get_instance();
-    if ($this->rcmail->config->get('show_password_button', true)) {
-      $this->add_hook('settings_actions', array($this, 'settings_actions'));
-      $this->register_action('plugin.mailu-password', array($this, 'password_form'));
-      $this->register_action('plugin.mailu-password-save', array($this, 'password_save'));
-    }
+    // password change in settings - always register
+    $this->add_hook('settings_actions', array($this, 'settings_actions'));
+    $this->register_action('plugin.mailu-password', array($this, 'password_form'));
+    $this->register_action('plugin.mailu-password-save', array($this, 'password_save'));
   }
 
   function startup($args)
