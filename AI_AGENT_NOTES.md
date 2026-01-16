@@ -112,6 +112,17 @@ $this->register_action('plugin.mailu-password-save', array($this, 'password_save
 
 **Change:** Removed Flask/AdminLTE/GitHub attribution links from footer
 
+### 5. Force IPv4 for SMTP
+
+**File:** `/mailu/overrides/postfix/postfix.cf`  
+**Location in container:** `/etc/postfix/main.cf` (appended)  
+**Mount:** Maps to `/overrides` in smtp container
+
+**Change:** Force Postfix to use IPv4 only to avoid IPv6 PTR/SPF failures.
+```
+inet_protocols = ipv4
+```
+
 ---
 
 ## DKIM Configuration
