@@ -65,6 +65,42 @@
   color: #fff !important;
 }
 
+/* Top menu bar - matte blue color */
+.toolbar.menu,
+#toolbar,
+.header,
+#layout-content > .header,
+#layout > .header,
+.mail-header,
+.content-frame > .header,
+#message-header,
+.message-header,
+#messagestack + div.header,
+div[role="toolbar"],
+.toolbar-menu {
+  background: #1e5a8e !important;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(0,0,0,0.05) 100%) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.toolbar.menu *,
+.header *,
+.toolbar.menu a,
+.header a,
+.toolbar.menu button,
+.header button,
+.toolbar.menu span,
+.header span {
+  color: #fff !important;
+}
+
+.toolbar.menu a:before,
+.header a:before,
+.toolbar.menu button:before,
+.header button:before {
+  color: #fff !important;
+}
+
 #taskmenu a.button-mailu {
   background-color: #ff6b35 !important;
   background-image: url('/static/mailu.png');

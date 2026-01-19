@@ -2,11 +2,37 @@
 
 {%- block content %}
 {%- call macros.card() %}
-<form class="form" method="post" role="form">
+<form class="form" method="post" role="form" id="loginForm" onsubmit="return appendDomain()">
   {{ form.hidden_tag() }}
   {{ macros.form_field(form.email) }}
   {{ macros.form_field(form.pw) }}
   {{ macros.form_fields(fields, label=False, class="btn btn-default") }}
 </form>
+<script>
+function appendDomain() {
+  var emailField = document.getElementById('email');
+  if (emailField) {
+    var emailValue = emailField.value.trim();
+    if (emailValue && !emailValue.includes('@')) {
+      emailField.value = emailValue + '@lgucalapan.ph';
+    }
+  }
+  return true;
+}
+// Also append on blur for visual feedback
+document.addEventListener('DOMContentLoaded', function() {
+  var emailField = document.getElementById('email');
+  if (emailField) {
+    // Remove any email type validation
+    emailField.type = 'text';
+    emailField.addEventListener('blur', function() {
+      var emailValue = this.value.trim();
+      if (emailValue && !emailValue.includes('@')) {
+        this.value = emailValue + '@lgucalapan.ph';
+      }
+    });
+  }
+});
+</script>
 {%- endcall %}
 {%- endblock %}
