@@ -68,6 +68,10 @@ services:
       - "../core/admin/mailu/sso/templates/sidebar_sso.html:/app/mailu/sso/templates/sidebar_sso.html:ro"
       - "../core/admin/mailu/sso/views/base.py:/app/mailu/sso/views/base.py:ro"
       - "../Calapan_City_Logo.png:/app/mailu/static/mailu.png:ro"
+      - "../city_hall1.jpg:/app/mailu/static/background.jpg:ro"
+      - "../mbs.jpg:/app/mailu/static/mbs.jpg:ro"
+      - "../mbs.jpg:/app/mailu/static/favicon.jpg:ro"
+      - "../chrmd1.png:/app/mailu/static/chrmd1.png:ro"
     depends_on:
       - redis
 

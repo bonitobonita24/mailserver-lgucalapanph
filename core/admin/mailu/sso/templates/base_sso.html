@@ -8,16 +8,23 @@
     <meta name="description" content="{% trans %}Admin page for{% endtrans %} {{ config["SITENAME"] }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Calapan City LGU | Official Mail Client</title>
+    <link rel="icon" type="image/jpeg" href="/static/favicon.jpg">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
     <style>
+      body.login-page {
+        background: url('/static/background.jpg') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+      }
       .login-centered {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 80vh;
+        min-height: 100vh;
         padding: 20px;
+        background: transparent;
       }
       .login-logo-img {
         width: 120px;
@@ -27,19 +34,115 @@
       .login-box {
         width: 100%;
         max-width: 400px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       }
       .login-box .card {
         border-radius: 8px;
+        border: none;
+        box-shadow: none;
+        background: transparent !important;
+      }
+      .login-box .card-body {
+        padding: 0;
+        background: transparent !important;
+      }
+      .welcome-text {
+        font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .login-box input[type="text"],
+      .login-box input[type="password"],
+      .login-box input[type="email"],
+      .login-box input.form-control {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
+        color: #333 !important;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+      }
+      .login-box input[type="text"]:focus,
+      .login-box input[type="password"]:focus,
+      .login-box input[type="email"]:focus,
+      .login-box input.form-control:focus {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
+      }
+      .login-box input::placeholder {
+        color: rgba(0, 0, 0, 0.5) !important;
+      }
+      .login-box button[type="submit"],
+      .login-box input[type="submit"],
+      .login-box .btn-primary {
+        background: linear-gradient(135deg, #1e5a8e 0%, #2874b5 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
+        font-weight: bold !important;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 4px 15px rgba(30, 90, 142, 0.4) !important;
+        transition: all 0.3s ease;
+      }
+      .login-box button[type="submit"]:hover,
+      .login-box input[type="submit"]:hover,
+      .login-box .btn-primary:hover {
+        background: linear-gradient(135deg, #2874b5 0%, #3a8fd6 100%) !important;
+        box-shadow: 0 6px 20px rgba(30, 90, 142, 0.6) !important;
+        transform: translateY(-2px);
+      }
+      .login-box button[type="submit"]:active,
+      .login-box input[type="submit"]:active,
+      .login-box .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 90, 142, 0.4) !important;
+      }
+      .partner-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: nowrap;
+      }
+      .partner-logos img {
+        height: auto;
+        max-height: 84px;
+        width: auto;
+        max-width: 33%;
+        object-fit: contain;
+      }
+      @media (max-width: 480px) {
+        .login-box {
+          padding: 20px;
+          margin: 10px;
+        }
+        .partner-logos img {
+          max-height: 60px;
+        }
       }
     </style>
   </head>
-  <body class="hold-transition">
+  <body class="hold-transition login-page">
     <div class="login-centered">
-      <img src="{{ config["LOGO_URL"] if config["LOGO_URL"] else '/static/mailu.png' }}" alt="{{ config["SITENAME"] }}" class="login-logo-img">
-      <h4 class="mb-4">Welcome to Calapan City Mail Client App</h4>
       <div class="login-box">
+        <h4 class="welcome-text">Welcome to Calapan City Mail Client App</h4>
         {{ utils.flashed_messages(container=False, default_category='success') }}
         {%- block content %}{%- endblock %}
+        <div class="partner-logos">
+          <img src="/static/mailu.png" alt="Calapan City">
+          <img src="/static/mbs.jpg" alt="MBS">
+          <img src="/static/chrmd1.png" alt="CHRMD">
+        </div>
       </div>
     </div>
     <script src="{{ url_for('static', filename='vendor.js') }}"></script>

@@ -1,3 +1,270 @@
+/* Glassmorphism effect for entire body and main containers */
+body {
+  background: url('/static/background.jpg') no-repeat center center fixed !important;
+  background-size: cover !important;
+}
+
+/* Glass effect for main layout containers */
+#layout-content,
+#layout > div.content,
+.content-frame,
+.content-frame-body,
+.boxcontent,
+.uibox,
+#messagelist,
+#mailview-right,
+#mailview-left,
+#message-header,
+.mail-header,
+.listbox,
+#mailboxlist,
+#directorylist,
+.treelist,
+#settings-sections,
+.propform,
+.form-section,
+#preferences-frame,
+#identities-list,
+.listing,
+.records-table {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+/* Glass effect for sidebar and navigation */
+#layout-sidebar,
+.sidebar,
+#layout-menu,
+.menu,
+#taskmenu {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Glass effect for input fields with emboss */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+textarea,
+select,
+.form-control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
+  color: #333 !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Glass effect for buttons */
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+.btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Glass effect for toolbar and top bar */
+#topline,
+#topnav,
+.toolbar,
+.header,
+#layout > .header {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Glass effect for mail compose and message view */
+#compose-content,
+#messagecontframe,
+.iframe-wrapper iframe {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Glass effect for folders and lists */
+.folderlist li,
+.listing li,
+.treelist li {
+  background: transparent !important;
+}
+
+.folderlist li.selected,
+.listing li.selected,
+.treelist li.selected,
+.folderlist li:hover,
+.listing li:hover,
+.treelist li:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Glass effect for modal dialogs */
+.popover,
+.popup,
+.modal-content,
+.ui-dialog {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+/* Color scheme override - Replace orange with blue accent */
+a,
+.listing tbody tr.selected > td a,
+.listing li.selected a,
+.listing li.selected span,
+a.active,
+.btn-primary,
+.button.primary,
+#taskmenu a.selected,
+.selected-item {
+  color: #2874b5 !important;
+}
+
+/* Primary button colors */
+.btn-primary,
+.button.primary,
+button.btn-primary,
+a.btn-primary {
+  background: linear-gradient(135deg, #1e5a8e 0%, #2874b5 100%) !important;
+  border-color: #1e5a8e !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.button.primary:hover {
+  background: linear-gradient(135deg, #2874b5 0%, #3a8fd6 100%) !important;
+}
+
+/* Task menu items */
+#taskmenu a {
+  color: #2874b5 !important;
+}
+
+#taskmenu a.selected,
+#taskmenu a:hover {
+  background-color: rgba(30, 90, 142, 0.2) !important;
+  color: #1e5a8e !important;
+}
+
+/* Icon colors */
+.icon,
+.icon:before,
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  color: #2874b5 !important;
+}
+
+/* Folder list and menu text colors */
+#mailboxlist li a,
+#folderlist-content li a,
+.treelist li a,
+.listing li a,
+#layout-sidebar a {
+  color: #1e5a8e !important;
+  font-weight: 500 !important;
+}
+
+#mailboxlist li.selected > a,
+#folderlist-content li.selected > a,
+.treelist li.selected > a,
+.listing li.selected > a {
+  color: #fff !important;
+  background: linear-gradient(135deg, #1e5a8e 0%, #2874b5 100%) !important;
+  font-weight: bold !important;
+}
+
+/* Inbox and folder badge colors */
+.badge,
+.unreadcount {
+  background: #2874b5 !important;
+  color: #fff !important;
+}
+
+/* Text visibility improvements */
+#messagelist tr td,
+.listing li,
+#layout-sidebar,
+.toolbar {
+  color: #1e5a8e !important;
+}
+
+/* Message reading pane - white background with logo watermark */
+#message-content,
+.message-part,
+#messagebody,
+.message-htmlpart,
+iframe#messagecontframe {
+  background: #ffffff !important;
+  position: relative;
+}
+
+#message-content::before,
+.message-part::before,
+#messagebody::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: url('/static/mailu.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure text is readable on white background */
+#message-content *,
+.message-part *,
+#messagebody * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Original Mailu button styles */
 #taskmenu a.button-mailu {
   background: url('/static/mailu.png');
   background-repeat: no-repeat;
