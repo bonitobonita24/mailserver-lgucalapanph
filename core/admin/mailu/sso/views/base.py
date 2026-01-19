@@ -106,7 +106,8 @@ def pw_change():
 def logout():
     flask_login.logout_user()
     flask.session.destroy()
-    response = flask.redirect(app.config['PROXY_AUTH_LOGOUT_URL'] or flask.url_for('.login'))
+    # Always redirect to webmail login page after logout
+    response = flask.redirect(app.config['PROXY_AUTH_LOGOUT_URL'] or app.config['WEB_WEBMAIL'])
     for cookie in ['roundcube_sessauth', 'roundcube_sessid', 'smsession']:
         response.set_cookie(cookie, 'empty', expires=0)
     return response
