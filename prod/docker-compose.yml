@@ -128,6 +128,8 @@ services:
       - "../webmails/roundcube/login:/var/www/roundcube/plugins/mailu:ro"
       - "../webmails/roundcube/config/config.inc.php:/conf/config.inc.php:ro"
       - "../Calapan_City_Logo.png:/var/www/roundcube/skins/elastic/images/calapan-logo.png:ro"
+      - "../mbs.jpg:/var/www/roundcube/skins/elastic/images/mbs.jpg:ro"
+      - "../webmails/roundcube/watermark.html:/var/www/roundcube/skins/elastic/watermark.html:ro"
     depends_on:
       - imap
 
