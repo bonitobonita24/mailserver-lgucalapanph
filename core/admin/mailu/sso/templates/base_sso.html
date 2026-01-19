@@ -36,7 +36,7 @@
   <body class="hold-transition">
     <div class="login-centered">
       <img src="{{ config["LOGO_URL"] if config["LOGO_URL"] else '/static/mailu.png' }}" alt="{{ config["SITENAME"] }}" class="login-logo-img">
-      <h4 class="mb-4">{{ config["SITENAME"] }}</h4>
+      <h4 class="mb-4">Welcome to Calapan City Mail Client App</h4>
       <div class="login-box">
         {{ utils.flashed_messages(container=False, default_category='success') }}
         {%- block content %}{%- endblock %}
