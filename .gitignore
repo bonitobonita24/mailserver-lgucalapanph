@@ -21,3 +21,6 @@ qemu-arm-static
 # Mailu Dev/Prod
 dev/data/
 prod/.env
+
+# SpecStory artifacts (may contain secrets)
+.specstory/
