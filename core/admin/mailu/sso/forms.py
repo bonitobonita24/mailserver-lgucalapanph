@@ -20,7 +20,7 @@ class EmailValidator:
 class LoginForm(flask_wtf.FlaskForm):
     class Meta:
         csrf = False
-    email = fields.StringField(_('Username'), [EmailValidator(), validators.DataRequired()], render_kw={'autofocus': True})
+    email = fields.StringField(_('Username_'), [EmailValidator(), validators.DataRequired()], render_kw={'autofocus': True})
     pw = fields.PasswordField(_('Password'), [validators.DataRequired()])
     pwned = fields.HiddenField(label='', default=-1)
     submitWebmail = fields.SubmitField(_('Sign in'))
