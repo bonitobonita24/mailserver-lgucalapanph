@@ -16,6 +16,17 @@
         background: url('/static/background.png') no-repeat center center fixed;
         background-size: cover;
         min-height: 100vh;
+        position: relative;
+      }
+      body.login-page::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(255, 180, 100, 0.7) 0%, rgba(255, 120, 80, 0.8) 100%);
+        z-index: 0;
       }
       .login-centered {
         display: flex;
@@ -25,6 +36,8 @@
         min-height: 100vh;
         padding: 20px;
         background: transparent;
+        position: relative;
+        z-index: 1;
       }
       .login-logo-img {
         width: 120px;
@@ -59,6 +72,10 @@
         margin-bottom: 20px;
         text-align: center;
         color: #fff;
+      }
+      .login-box label {
+        color: #fff !important;
+        font-weight: 600;
       }
       .login-box input[type="text"],
       .login-box input[type="password"],
@@ -115,15 +132,12 @@
         margin-top: 25px;
         flex-wrap: nowrap;
         padding: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
       }
       .partner-logos img {
         height: 60px;
         width: auto;
         max-width: 80px;
         object-fit: contain;
-        border-radius: 4px;
       }
       @media (max-width: 480px) {
         .login-box {
