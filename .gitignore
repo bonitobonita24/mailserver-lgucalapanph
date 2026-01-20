@@ -21,3 +21,4 @@ qemu-arm-static
 # Mailu Dev/Prod
 dev/data/
 prod/.env
+.specstory/
