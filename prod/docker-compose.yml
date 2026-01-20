@@ -66,6 +66,7 @@ services:
       - "../core/admin/mailu/ui/templates/base.html:/app/mailu/ui/templates/base.html:ro"
       - "../core/admin/mailu/sso/templates/base_sso.html:/app/mailu/sso/templates/base_sso.html:ro"
       - "../core/admin/mailu/sso/templates/sidebar_sso.html:/app/mailu/sso/templates/sidebar_sso.html:ro"
+      - "../core/admin/mailu/sso/templates/form_sso.html:/app/mailu/sso/templates/form_sso.html:ro"
       - "../core/admin/mailu/sso/views/base.py:/app/mailu/sso/views/base.py:ro"
       - "../Calapan_City_Logo.png:/app/mailu/static/mailu.png:ro"
       - "../city_hall1.jpg:/app/mailu/static/background.jpg:ro"
