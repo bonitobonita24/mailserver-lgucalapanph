@@ -81,23 +81,26 @@
       .login-box input[type="password"],
       .login-box input[type="email"],
       .login-box input.form-control {
-        background: rgba(255, 255, 255, 0.1) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
-        color: #333 !important;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        background: transparent !important;
+        border: none !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4) !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        color: #fff !important;
+        padding: 10px 5px !important;
+        transition: all 0.3s ease;
       }
       .login-box input[type="text"]:focus,
       .login-box input[type="password"]:focus,
       .login-box input[type="email"]:focus,
       .login-box input.form-control:focus {
-        background: rgba(255, 255, 255, 0.15) !important;
-        border: 1px solid rgba(255, 255, 255, 0.4) !important;
-        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1) !important;
+        background: transparent !important;
+        border-bottom: 2px solid #3498db !important;
+        box-shadow: 0 4px 8px -4px rgba(52, 152, 219, 0.6) !important;
+        outline: none !important;
       }
       .login-box input::placeholder {
-        color: rgba(0, 0, 0, 0.5) !important;
+        color: rgba(255, 255, 255, 0.6) !important;
       }
       .login-box button[type="submit"],
       .login-box input[type="submit"],
