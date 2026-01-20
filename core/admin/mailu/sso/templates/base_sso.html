@@ -47,13 +47,13 @@
       .login-box {
         width: 100%;
         max-width: 400px;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         padding: 30px;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
       }
       .login-box .card {
         border-radius: 8px;
@@ -102,20 +102,18 @@
       .login-box button[type="submit"],
       .login-box input[type="submit"],
       .login-box .btn-primary {
-        background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        background: linear-gradient(135deg, #1a5276 0%, #2874a6 50%, #3498db 100%) !important;
+        border: none !important;
         color: white !important;
         font-weight: bold !important;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4) !important;
+        box-shadow: 0 4px 15px rgba(26, 82, 118, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
         transition: all 0.3s ease;
       }
       .login-box button[type="submit"]:hover,
       .login-box input[type="submit"]:hover,
       .login-box .btn-primary:hover {
-        background: linear-gradient(135deg, #ff8c42 0%, #ffa260 100%) !important;
-        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6) !important;
+        background: linear-gradient(135deg, #2874a6 0%, #3498db 50%, #5dade2 100%) !important;
+        box-shadow: 0 6px 20px rgba(26, 82, 118, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
         transform: translateY(-2px);
       }
       .login-box button[type="submit"]:active,
