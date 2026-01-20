@@ -22,15 +22,14 @@ def login():
 
     fields = []
 
-    if 'url' in flask.request.args and not 'homepage' in flask.request.url:
+    # Check if this is an admin login request (from /admin redirect)
+    if 'url' in flask.request.args and '/admin' in flask.request.args.get('url', ''):
+        # Admin login - show only Admin button
         fields.append(form.submitAdmin)
     else:
-        form.submitAdmin.label.text = form.submitAdmin.label.text + ' Admin'
-        form.submitWebmail.label.text = form.submitWebmail.label.text + ' Webmail'
+        # Regular webmail login - show only Webmail button
         if str(app.config["WEBMAIL"]).upper() != "NONE":
             fields.append(form.submitWebmail)
-        if str(app.config["ADMIN"]).upper() != "FALSE":
-            fields.append(form.submitAdmin)
     fields = [fields]
 
     if form.validate_on_submit():
