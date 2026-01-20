@@ -93,11 +93,11 @@ def pw_change():
             user.change_pw_next_login = False
             models.db.session.commit()
             flask.current_app.logger.info(f'Forced password change by {user} from: {client_ip}/{client_port}: success: password: {form.pwned.data}')
-            # Log out the user and redirect to login page after forced password change
+            # Log out the user and redirect to root URL after forced password change
             flask.session.pop('redirect_to', None)
             flask_login.logout_user()
             flask.flash(_('Password changed successfully. Please log in with your new password.'), 'success')
-            return flask.redirect(flask.url_for('sso.login'))
+            return flask.redirect('/')
         flask.flash(_("The current password is incorrect!"), "error")
 
     return flask.render_template('pw_change.html', form=form)
