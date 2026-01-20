@@ -19,20 +19,6 @@ function appendDomain() {
   }
   return true;
 }
-// Also append on blur for visual feedback
-document.addEventListener('DOMContentLoaded', function() {
-  var emailField = document.getElementById('email');
-  if (emailField) {
-    // Remove any email type validation
-    emailField.type = 'text';
-    emailField.addEventListener('blur', function() {
-      var emailValue = this.value.trim();
-      if (emailValue && !emailValue.includes('@')) {
-        this.value = emailValue + '@lgucalapan.ph';
-      }
-    });
-  }
-});
 </script>
 {%- endcall %}
 {%- endblock %}

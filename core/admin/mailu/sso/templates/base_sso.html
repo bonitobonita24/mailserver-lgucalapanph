@@ -67,7 +67,7 @@
       }
       .welcome-text {
         font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-        font-size: 1em;
+        font-size: 1.5em;
         font-weight: bold;
         margin-bottom: 20px;
         text-align: center;
@@ -76,6 +76,9 @@
       .login-box label {
         color: #fff !important;
         font-weight: 600;
+      }
+      .login-box .form-group {
+        position: relative;
       }
       .login-box input[type="text"],
       .login-box input[type="password"],
@@ -89,6 +92,23 @@
         color: #fff !important;
         padding: 10px 5px !important;
         transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+      }
+      .login-box .form-group::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #3498db;
+        box-shadow: 0 0 10px 2px rgba(52, 152, 219, 0.8), 0 0 20px 4px rgba(52, 152, 219, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .login-box .form-group:focus-within::after {
+        opacity: 1;
       }
       .login-box input[type="text"]:focus,
       .login-box input[type="password"]:focus,
@@ -96,7 +116,7 @@
       .login-box input.form-control:focus {
         background: transparent !important;
         border-bottom: 2px solid #3498db !important;
-        box-shadow: 0 6px 12px -6px rgba(52, 152, 219, 0.9), 0 10px 20px -8px rgba(52, 152, 219, 0.6) !important;
+        box-shadow: none !important;
         outline: none !important;
       }
       .login-box input::placeholder {
@@ -154,7 +174,7 @@
   <body class="hold-transition login-page">
     <div class="login-centered">
       <div class="login-box">
-        <h4 class="welcome-text">Welcome to Calapan City Mail Client App</h4>
+        <h2 class="welcome-text">Calapan City Mail App</h2>
         {{ utils.flashed_messages(container=False, default_category='success') }}
         {%- block content %}{%- endblock %}
         <div class="partner-logos">

@@ -1,0 +1,53 @@
+Delivered-To: jerlanloresto24@gmail.com
+Received: by 2002:a05:6130:43d0:b0:944:327e:8fed with SMTP id gn16csp3589592uab;
+        Mon, 19 Jan 2026 20:17:15 -0800 (PST)
+X-Received: by 2002:a05:6a00:114e:b0:81f:5198:ba3a with SMTP id d2e1a72fcca58-81fe87e8d62mr663477b3a.19.1768882635060;
+        Mon, 19 Jan 2026 20:17:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768882635; cv=none;
+        d=google.com; s=arc-20240605;
+        b=XxZMqShCYA3dD4RiUtJyjL/ChK63jVeoorGpSkdF9y/JZzY2YwIYCokn/QgFY9NLPH
+         uHkOmDOFihMOp3Oe2HkJOttFW9gktjJQLkZ7X/fEs8YWGfySQSEfdC5kYEkaFxTfz1ND
+         KuNoGlBZndDJwf6FqYRkkPmw92CYEL55r6fR76qy81ldQcI85QTFQcclH5LbhE+g5u5J
+         rKgQEJhZYT/Gp0W8zx0BzeXu8tYbXVn6lLpaJDPDFL7Rg0jifm59nz04UpfNN4RI2hOJ
+         Zi+VEAKMGxDvzIojpoTAeEiQFarsFkKy05kwlf97mFSNhQ5ewGWtCKO1QFfL35AnpZJ2
+         8QBg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:message-id:subject:to:from:date
+         :mime-version;
+        bh=pMHRLhcVSHE6ndRMLg8Tqbyp7bOED+K8nWhRF1Uv+dg=;
+        fh=0n457yulnYaJW14gNTSPGkJMvoNKk2lwrxeCIsRuyno=;
+        b=De+u+1HJEobtWEtAHJY3LkQirB9hsL4JRtuYGQLJTCUVM/1NglhMIe+gj+mq/PnatY
+         OKJIRXSuoiiaPo4pAUA1ynk5Qj1hH+II+tlGtXuoDKgYBFG9NROxwctVCevDmLZgDOAU
+         Q61UKOWZ+0p6CUdiM1yDksTJC5v5AoSxWUIvLEKV2eG+FA3A/0yECWioFuO+eN96Hn8i
+         5IH2WYcRVB5d78F85TgESOZIGFfNIZT/C7XtZZ3MIuZzSS3EApv+8LtjM3EetdaRi0s8
+         pg5iJzVtCRXdyMJNKJAb9Cbz2X8Hqs1SxHPLmyXO2qMjOcb+dCvIfKGLgdUNv3Mx06mW
+         3bHA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of jerlan@lgucalapan.ph designates 72.60.43.21 as permitted sender) smtp.mailfrom=jerlan@lgucalapan.ph;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=lgucalapan.ph
+Return-Path: <jerlan@lgucalapan.ph>
+Received: from mail.lgucalapan.ph (mail.lgucalapan.ph. [72.60.43.21])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-81fa12b2c2dsi17472495b3a.309.2026.01.19.20.17.14
+        for <jerlanloresto24@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 19 Jan 2026 20:17:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of jerlan@lgucalapan.ph designates 72.60.43.21 as permitted sender) client-ip=72.60.43.21;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of jerlan@lgucalapan.ph designates 72.60.43.21 as permitted sender) smtp.mailfrom=jerlan@lgucalapan.ph;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=lgucalapan.ph
+MIME-Version: 1.0
+Authentication-Results: mail.lgucalapan.ph;
+	auth=pass smtp.mailfrom=jerlan@lgucalapan.ph
+Date: Tue, 20 Jan 2026 04:17:12 +0000
+From: jerlan@lgucalapan.ph
+To: Jerlanloresto24 <jerlanloresto24@gmail.com>
+Subject: This is to confirm
+Message-ID: <f616bd80fe4ccdd7e269c0a888a9e6e0@lgucalapan.ph>
+X-Sender: jerlan@lgucalapan.ph
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spamd-Bar: /
+
+confirming the email if working
