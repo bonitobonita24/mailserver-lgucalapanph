@@ -40,8 +40,10 @@ services:
       - "$ROOT/certs:/certs"
       - "$ROOT/overrides/nginx:/overrides:ro"
     networks:
-      - default
-      - dokploy-network
+      default:
+        driver: bridge
+      dokploy-network:
+        external: true
 
   resolver:
     image: ghcr.io/mailu/unbound:${VERSION}
