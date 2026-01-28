@@ -135,6 +135,5 @@ services:
 networks:
   default:
     driver: bridge
-    ipam:
   dokploy-network:
     external: true
