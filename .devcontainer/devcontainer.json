@@ -1,7 +1,7 @@
 {
 	"name": "mailserver-lgucalapanph",
 	"image": "mcr.microsoft.com/devcontainers/python:3",
-	"containerName": "mailserver-lgucalapanph",
+	"containerName": "${localWorkspaceFolderBasename}-devcontainer",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"version": "latest",
